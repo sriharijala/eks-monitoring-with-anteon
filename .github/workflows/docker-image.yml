@@ -14,6 +14,7 @@ jobs:
 
     steps:
     - name: Check out code
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       uses: actions/checkout@v4
 
     - name: run bash script
