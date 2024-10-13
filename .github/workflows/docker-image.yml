@@ -22,8 +22,7 @@ jobs:
        ls -l
        echo "that"
       
-    #- name: Make script executable
-    #  run: chmod +x ./jenkins/jenkinsfile-microservice-app-production.sh
-      
-   # - name: Build the Docker image
-   #   run: jenkins/jenkinsfile-microservice-app-production.sh
+    - name: Build docker images
+      run: |
+        chmod +x ./jenkins/jenkinsfile-microservice-app-production.sh
+        jenkins/jenkinsfile-microservice-app-production.sh
