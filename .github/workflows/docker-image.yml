@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v4
     - name: Run script file
       run: |
-         chmod +x jenkins/jenkinsfile-microservice-app-production.sh
-         jenkins/jenkinsfile-microservice-app-production.sh
+         chmod +x ./jenkins/jenkinsfile-microservice-app-production.sh
+         ./jenkins/jenkinsfile-microservice-app-production.sh
       shell: bash
