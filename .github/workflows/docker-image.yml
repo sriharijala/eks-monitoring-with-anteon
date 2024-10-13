@@ -15,16 +15,14 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v4
-      with:
-        path: main
 
     - name: run bash script
       shell: bash
       run: |
-       ls -lt
+       ls -ltr
        echo "that"
       
     - name: Build docker images
       run: |
-        chmod +x ./jenkins/jenkinsfile-microservice-app-production.sh
+        chmod +x jenkins/jenkinsfile-microservice-app-production.sh
         jenkins/jenkinsfile-microservice-app-production.sh
