@@ -15,8 +15,7 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v4
-      with:
-        path: main
+
     - name: run bash script
       shell: bash
       run: |
