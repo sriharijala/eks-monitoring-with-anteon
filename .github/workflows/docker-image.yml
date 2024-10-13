@@ -13,12 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Check out code
+      uses: actions/checkout@v4
       with:
         path: main
-        
-    - name: Make script executable
-      run: chmod +x ./jenkins/jenkinsfile-microservice-app-production.sh
+    - name: run bash script
+      shell: bash
+      run: |
+       ls -l
+       echo "that"
       
-    - name: Build the Docker image
-      run: jenkins/jenkinsfile-microservice-app-production.sh
+    #- name: Make script executable
+    #  run: chmod +x ./jenkins/jenkinsfile-microservice-app-production.sh
+      
+   # - name: Build the Docker image
+   #   run: jenkins/jenkinsfile-microservice-app-production.sh
