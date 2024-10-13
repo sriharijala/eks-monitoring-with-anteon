@@ -19,7 +19,7 @@ jobs:
     - name: run bash script
       shell: bash
       run: |
-       ls -ltr
+       tree -d .
        echo "that"
       
     - name: Build docker images
