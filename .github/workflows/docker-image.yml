@@ -8,14 +8,13 @@ on:
 
 jobs:
 
-  build:
+  build-docker-images:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
+    - name: Make script executable
+      run: chmod +x ./jenkins/jenkinsfile-microservice-app-production.sh
     - name: Build the Docker image
-      run: |
-         chmod +x jenkins/jenkinsfile-microservice-app-production.sh
-         jenkins/jenkinsfile-microservice-app-production.sh
-      shell: bash
+      run: jenkins/jenkinsfile-microservice-app-production.sh
