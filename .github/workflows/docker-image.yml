@@ -13,9 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
+    # Current repo
+    - name: Checkout
     - uses: actions/checkout@v4
-    - name: Run script file
+
+    - name: Run App Production script
       run: |
-         chmod +x ./jenkins/jenkinsfile-microservice-app-production.sh
-         ./jenkins/jenkinsfile-microservice-app-production.sh
+         chmod +x jenkins/jenkinsfile-microservice-app-production.sh
+         jenkins/jenkinsfile-microservice-app-production.sh
       shell: bash
